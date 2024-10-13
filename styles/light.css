@@ -3,7 +3,38 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
+:root .theme_light {
+  --bg-color: #fff1f7;
+  --bg-image: url(../images/cover-image-light.png);
+  --text-color: #353430;
+  --accent-color: #ff8dcb;
+  --decorated-color: #353430;
+  --text-color-title: #353430;
+  --title-h1-color: #ffc2e6;
+}
+@media (prefers-color-scheme: light) {
+  :root .theme_auto {
+    --bg-color: #fff1f7;
+    --bg-image: url(../images/cover-image-light.png);
+    --text-color: #353430;
+    --accent-color: #ff8dcb;
+    --decorated-color: #353430;
+    --text-color-title: #353430;
+    --title-h1-color: #ffc2e6;
+  }
+  .theme_auto .header__rectangle {
+    display: none;
+  }
+}
+.theme_light .header__rectangle {
+  display: none;
+}
+.theme_auto .section__title {
+  color: var(--text-color-title);
+}
+.theme_light .section__title {
+  color: var(--text-color-title);
+}
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
