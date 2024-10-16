@@ -188,13 +188,14 @@
 /* -----maim----- */
 .content {
   display: grid;
-  gap: 52px;
+  gap: 50px;
   padding-block-end: 20px;
+  line-height: 130%;
 }
 
 @media (width >= 768px) {
   .content {
-    gap: 81px;
+    gap: 80px;
     padding-block-end: 40px;
   }
 }
@@ -208,7 +209,6 @@
   color: var(--section-title-color);
   font-weight: var(--font-weight-title);
   font-size: inherit;
-  line-height: 130%;
 }
 
 .card {
@@ -218,7 +218,7 @@
 
 .wrapper__card {
   display: grid;
-  gap: 21px;
+  gap: 20px;
 }
 .card__subtitle {
   font-weight: inherit;
@@ -240,7 +240,7 @@
 .section__gallery {
   display: grid;
   justify-content: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .image-list {
@@ -278,7 +278,7 @@
   }
 
   .section__gallery {
-    gap: 20px;
+    gap: 19px;
   }
 
   .image-list {
@@ -291,14 +291,6 @@
 
   .image__grid-row {
     grid-row: span 2;
-  }
-
-  .image__grid-row {
-    grid-row: span 2;
-  }
-
-  .image__grid-column {
-    grid-column: span 2;
   }
 }
 
@@ -346,6 +338,6 @@
 
 @media (width >= 768px) {
   .footer {
-    padding-block-end: 34px;
+    padding-block-end: 40px;
   }
 }
