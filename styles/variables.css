@@ -4,13 +4,14 @@
 */
 
 :root {
-  --font-family: "IBM Plex Mono", sans-serif;
+  --font-family: "IBM Plex Mono", monospace;
   --bg-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
   --decorated-color: #ff0070;
   --text-color-title: #000028;
+  --section__title-color: var(--accent-color);
   --title-h1-color: #db00ff;
   --shadow-color: #ff0070;
   --font-weight-title: 700;
@@ -21,5 +22,11 @@
 @media (width >= 768px) {
   :root {
     --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme_auto .section__title {
+    color: var(--section__title-color);
   }
 }

@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   display: grid;
-  gap: 36px;
+  gap: 29px;
   padding: 10px;
   color: var(--text-color);
   font-family: var(--font-family, "IBM Plex Mono");
@@ -11,33 +11,38 @@
   font-size: var(--font-size-text, 18px);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
-  background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
+
 @media (width >= 768px) {
   .page {
-    gap: 56px;
+    gap: 40px;
     padding: 20px;
   }
 }
+
 .header {
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   height: 100vh;
-  padding-block-end: 15px;
+  min-height: 668px;
+  padding-block-end: 20px;
 }
+
 @media (width >= 768px) {
   .header {
     padding-block-end: 40px;
   }
 }
+
 .decorated-zone {
   position: relative;
   color: var(--decorated-color);
 }
+
 .decorated-zone::before {
   content: " ";
   position: absolute;
@@ -47,20 +52,23 @@
   inline-size: 25px;
   block-size: 25px;
 }
+
 .decorated-zone::after {
   content: " ";
   position: absolute;
   border-inline-start: 1px solid currentColor;
   border-block-end: 1px solid currentColor;
-  inset-block-end: 15px;
+  inset-block-end: 20px;
   inline-size: 25px;
   block-size: 25px;
 }
+
 @media (width >= 768px) {
   .decorated-zone::after {
     inset-block-end: 40px;
   }
 }
+
 .header__rectangle {
   position: absolute;
   inset-inline-end: 0;
@@ -72,8 +80,10 @@
   color: var(--accent-color);
   line-height: 139%;
   text-align: center;
+  text-transform: uppercase;
   inset-inline-end: 28px;
 }
+
 .header__rectangle::after {
   content: " ";
   position: absolute;
@@ -85,6 +95,7 @@
   inline-size: 9px;
   block-size: 9px;
 }
+
 .header__theme-menu {
   display: grid;
   justify-self: end;
@@ -96,16 +107,19 @@
   display: grid;
   gap: 10px;
 }
+
 .header__theme-menu-item {
   justify-self: center;
   align-self: start;
 }
+
 @media (width >= 1024px) {
   .header__theme-menu {
     display: flex;
     justify-self: center;
     align-self: start;
   }
+
   .header__theme-menu-list {
     display: flex;
   }
@@ -122,11 +136,13 @@
   text-transform: lowercase;
   background-color: transparent;
 }
+
 .header__theme-menu-button:focus-visible {
   border-block-end: 1px solid currentColor;
 }
+
 .header__theme-menu-button:hover {
-  outline: 1px solid currentColor;
+  outline: 1px solid rgba(50, 49, 45, 0.4);
 }
 
 .header__theme-menu-button_active {
@@ -142,11 +158,13 @@
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--shadow-color);
 }
+
 @media (width >= 768px) {
   .header__title {
     margin-inline-start: -20px;
   }
 }
+
 .title-decor {
   color: var(--text-color-title, #000028);
   font-weight: var(--font-weight-title, 700);
@@ -154,10 +172,12 @@
   line-height: 130%;
   background: var(--accent-color, #ff0070);
 }
+
 .header__paragraph {
   justify-self: center;
   align-self: center;
 }
+
 @media (width >= 768px) {
   .header__paragraph {
     justify-self: right;
@@ -169,39 +189,62 @@
 .content {
   display: grid;
   gap: 52px;
+  padding-block-end: 20px;
 }
+
 @media (width >= 768px) {
   .content {
-    gap: 82px;
+    gap: 81px;
+    padding-block-end: 40px;
   }
 }
+
 .section {
   display: grid;
-  gap: 22px;
+  gap: 21px;
 }
+
 .section__title {
-  color: var(--accent-color);
+  color: var(--section__title-color);
   font-weight: var(--font-weight-title);
   font-size: inherit;
   line-height: 130%;
 }
+
 .card {
   display: grid;
-  gap: 10px;
+  gap: 9px;
+}
+
+.wrapper__card {
+  display: grid;
+  gap: 21px;
+}
+.card__subtitle {
+  font-weight: inherit;
+  line-height: 130%;
 }
 
 .card__link {
   text-shadow: 2px 2px 0 var(--shadow-color);
 }
+
 .card__link:focus-visible {
   outline: 1px solid currentColor;
 }
+
 .card__link:hover {
   border-block-end: 1px solid currentColor;
 }
+
 .section__gallery {
   display: grid;
   justify-content: center;
+  gap: 10px;
+}
+
+.image-list {
+  display: grid;
   gap: 10px;
 }
 
@@ -211,56 +254,74 @@
   inline-size: 100%;
   block-size: 100%;
 }
+
 @media (width >= 768px) {
-  .card {
-    gap: 9px;
-  }
-  .section:nth-of-type(1) {
+  .section__focus--problems {
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
   }
-  .section:nth-of-type(1) .section__title {
-    grid-row: span 2;
+
+  .section__focus--problems .card {
+    grid-column: 2;
   }
-  .section:nth-of-type(2) .section__title {
+
+  .section__reasons .section__title {
     display: grid;
     grid-template-columns: min-content;
   }
-  .section:nth-of-type(3) {
+
+  .section__adviсe {
     grid-template-columns: 1fr 2fr;
   }
-  .section:nth-of-type(3) .section__title {
-    grid-row: 1 / 7;
+  .wrapper__card {
+    grid-column: 2;
+    gap: 21px;
   }
+
   .section__gallery {
+    gap: 20px;
+  }
+
+  .image-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  .gallery__title {
-    grid-column: span 3;
-  }
-
-  .image:nth-of-type(1) {
+  .image__grid-column {
     grid-column: span 2;
   }
-  .image:nth-of-type(2) {
-    grid-row: span 2;
-  }
-  .image:nth-of-type(3) {
+
+  .image__grid-row {
     grid-row: span 2;
   }
 
-  .image:nth-of-type(5) {
+  .image__grid-row {
+    grid-row: span 2;
+  }
+
+  .image__grid-column {
     grid-column: span 2;
   }
 }
+
 @media (width >= 1024px) {
-  .section:nth-of-type(2) .section__title {
-    grid-template-columns: fit-content(33%);
+  .section__focus--problems {
+    gap: 22px 9px;
+  }
+
+  .section__reasons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section__reasons .section__title {
+    grid-template-columns: fit-content(32%);
     grid-column: span 3;
   }
-  .section:nth-of-type(2) .card {
+
+  .section__reasons .card {
     grid-template-rows: repeat(2, min-content);
+  }
+
+  .section__adviсe {
+    column-gap: 10px;
   }
 }
 
@@ -268,6 +329,8 @@
 .footer {
   display: grid;
   height: 100vh;
+  min-height: 668px;
+  padding-block-end: 20px;
   color: var(--title-h1-color);
   font-weight: var(--font-weight-title);
   font-size: var(--font-size-title);
@@ -278,4 +341,9 @@
   justify-self: center;
   align-self: center;
   text-shadow: 2px 2px 0 0 var(--accent-color);
+}
+@media (width >= 768px) {
+  .footer {
+    padding-block-end: 34px;
+  }
 }

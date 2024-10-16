@@ -10,8 +10,11 @@
   --accent-color: #ff8dcb;
   --decorated-color: #353430;
   --text-color-title: #353430;
+  --section__title-color: var(--text-color-title);
   --title-h1-color: #ffc2e6;
+  --shadow-color: #ff8dcb;
 }
+
 @media (prefers-color-scheme: light) {
   :root .theme_auto {
     --bg-color: #fff1f7;
@@ -20,21 +23,35 @@
     --accent-color: #ff8dcb;
     --decorated-color: #353430;
     --text-color-title: #353430;
+    --section__title-color: var(--text-color-title);
     --title-h1-color: #ffc2e6;
+    --shadow-color: #ff8dcb;
   }
+  .theme_auto .section__title {
+    color: var(--section__title-color);
+  }
+
+  .theme_auto .header__theme-menu-button:hover {
+    outline: 1px solid rgba(255, 0, 112, 0.4);
+  }
+
   .theme_auto .header__rectangle {
     display: none;
   }
 }
+
+.theme_light .header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
+}
+
 .theme_light .header__rectangle {
   display: none;
 }
-.theme_auto .section__title {
-  color: var(--text-color-title);
-}
+
 .theme_light .section__title {
-  color: var(--text-color-title);
+  color: var(--section__title-color);
 }
+
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,

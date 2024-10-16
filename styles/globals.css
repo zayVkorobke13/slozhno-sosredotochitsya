@@ -23,10 +23,12 @@ p {
   margin: 0;
 }
 
-ul {
+ul,
+li {
   margin: 0;
   padding: 0;
   list-style: none;
+  list-style-type: none;
 }
 
 picture {
@@ -41,6 +43,7 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
 ul,
 li,
 a,
