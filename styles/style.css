@@ -138,11 +138,11 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid currentColor;
+  border-block-end: 1px solid var(--button-focus-color);
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(50, 49, 45, 0.4);
+  outline: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button_active {
@@ -152,7 +152,7 @@
 
 .header__title {
   justify-self: start;
-  color: var(--title-h1-color);
+  color: var(--header-title-color);
   font-weight: var(--font-weight-title, 700);
   font-size: var(--font-size-title); /*116px*/
   line-height: 83%;
@@ -205,7 +205,7 @@
 }
 
 .section__title {
-  color: var(--section__title-color);
+  color: var(--section-title-color);
   font-weight: var(--font-weight-title);
   font-size: inherit;
   line-height: 130%;
@@ -331,7 +331,7 @@
   height: 100vh;
   min-height: 668px;
   padding-block-end: 20px;
-  color: var(--title-h1-color);
+
   font-weight: var(--font-weight-title);
   font-size: var(--font-size-title);
   line-height: 83%;
@@ -340,8 +340,10 @@
 .footer__title {
   justify-self: center;
   align-self: center;
-  text-shadow: 2px 2px 0 0 var(--accent-color);
+  color: var(--header-title-color);
+  text-shadow: 2px 2px 0 var(--shadow-color);
 }
+
 @media (width >= 768px) {
   .footer {
     padding-block-end: 34px;

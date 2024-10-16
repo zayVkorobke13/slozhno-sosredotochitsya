@@ -11,9 +11,11 @@
   --accent-color: #ff0070;
   --decorated-color: #ff0070;
   --text-color-title: #000028;
-  --section__title-color: var(--accent-color);
-  --title-h1-color: #db00ff;
+  --section-title-color: var(--accent-color);
+  --header-title-color: #db00ff;
   --shadow-color: #ff0070;
+  --hover-color: rgba(50, 49, 45, 0.4);
+  --button-focus-color: #353430;
   --font-weight-title: 700;
   --font-weight-paragraph: 400;
   --font-size-text: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
@@ -22,11 +24,5 @@
 @media (width >= 768px) {
   :root {
     --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .theme_auto .section__title {
-    color: var(--section__title-color);
   }
 }
