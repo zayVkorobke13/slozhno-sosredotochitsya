@@ -14,8 +14,8 @@
   --section-title-color: var(--accent-color);
   --header-title-color: #db00ff;
   --shadow-color: #ff0070;
-  --hover-color: rgba(50, 49, 45, 0.4);
-  --button-focus-color: #353430;
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --button-focus-color: #ff0070;
   --font-weight-title: 700;
   --font-weight-paragraph: 400;
   --font-size-text: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);

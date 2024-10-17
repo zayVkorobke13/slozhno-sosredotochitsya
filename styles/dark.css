@@ -6,7 +6,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .theme_auto .section__title {
-    color: var(--section__title-color);
+  :root .theme_auto {
+    --section-title-color: var(--accent-color);
   }
 }
